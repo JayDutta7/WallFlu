@@ -22,20 +22,19 @@ dev_dependencies:
 
 
 flutter:
+ uses-material-design: true
+ assets:
 
-  uses-material-design: true
+ - images/flutterwithlogo.png
+ - images/flutter_logo.png
+ - images/aftrsplshbckgrnd.png
 
-  assets:
-  - images/flutterwithlogo.png
-  - images/flutter_logo.png
-  - images/aftrsplshbckgrnd.png
-
-  fonts:
-  - family: Aleo
-    fonts:
-    - asset: fonts/Aleo-Bold.ttf
-    - asset: fonts/Aleo-BoldItalic.ttf
-    - asset: fonts/Aleo-Italic.ttf
+ fonts:
+ - family: Aleo
+   fonts:
+   - asset: fonts/Aleo-Bold.ttf
+   - asset: fonts/Aleo-BoldItalic.ttf
+   - asset: fonts/Aleo-Italic.ttf
 
 
 
