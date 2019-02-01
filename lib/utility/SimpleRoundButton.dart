@@ -1,22 +1,15 @@
-
 import 'package:flutter/material.dart';
 
-class SimpleRoundButton extends StatelessWidget{
-
-  final Color splashColor;//Click spalsh color
-  final Text buttonText;//button text
-  final Color textColor;//text color
-  final Color backColor;//background color
-  final void onPressed;//onpressed
-
+class SimpleRoundButton extends StatelessWidget {
+  final Color splashColor; //Click spalsh color
+  final String buttonText; //button text
+  final Color textColor; //text color
+  final Color backColor; //background color
+  final void onPressed; //onpressed
 
   //Constructor
-  SimpleRoundButton(
-      this.backColor,
-      this.splashColor,
-      this.buttonText,
-      this.textColor,
-      this.onPressed);
+  SimpleRoundButton(this.backColor, this.splashColor, this.buttonText,
+      this.textColor, this.onPressed);
 
   @override
   Widget build(BuildContext context) {
@@ -28,30 +21,31 @@ class SimpleRoundButton extends StatelessWidget{
         children: <Widget>[
           Expanded(
             child: FlatButton(
-
               shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(25.0)
-              ),
+                  borderRadius: BorderRadius.circular(25.0)),
               splashColor: splashColor,
               textColor: textColor,
               color: backColor,
               child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Padding(padding: EdgeInsets.all(20.0),
-                child: buttonText,
-                )
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Padding(
+                    padding: EdgeInsets.all(15.0),
+                    child: Text(
+                      buttonText,
+                      style: TextStyle(
+                          fontSize: 16.0,
+                          fontWeight: FontWeight.w800,
+                          fontFamily: 'Aleo'),
+                    ),
+                  )
                 ],
-               ),
-              onPressed:()=> onPressed,
+              ),
+              onPressed: () => onPressed,
             ),
           ),
-          Column(
-
-          )
         ],
       ),
     );
   }
-
 }

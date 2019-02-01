@@ -6,51 +6,37 @@ class AfterSplash extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
 
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Welcome to Flutter',
-      home: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Center(
-          child: Container(
-            decoration: BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage("images/aftrsplshbckgrnd.png"),
-                    fit: BoxFit.cover)),
-
-            child: Container(
-
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: <Widget>[
-                  SimpleRoundButton(
-                    Colors.white12,
-                    Colors.blue,
-                    Text('Login'),
-                    Colors.deepPurple,
-                      click()
-                  ),
-                  SimpleRoundButton(
-                      Colors.white12,
-                      Colors.orangeAccent,
-                      Text('Registration'),
-                      Colors.red,
-                      click()
-                  )
-
-                ],
-              ),
-
-
-
-            ),
-
-          ),
-        ),
-      ),
+    return Scaffold(
+      //debugShowCheckedModeBanner: false,
+      body: _Home(),
     );
   }
-  void click(){
 
+  void click() {}
+
+  Widget _Home() {
+    Stack(
+      children: <Widget>[
+        Container(
+          decoration: BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage("images/aftrsplshbckgrnd.png"),
+                  fit: BoxFit.cover)),
+        ),
+        SingleChildScrollView(
+          child: Container(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: <Widget>[
+                SimpleRoundButton(Colors.white70, Colors.redAccent,'Login',
+                    Colors.white, click()),
+                SimpleRoundButton(Colors.redAccent, Colors.white, 'Registration',
+                    Colors.white, click())
+              ],
+            ),
+          ),
+        ),
+      ],
+    );
   }
 }
