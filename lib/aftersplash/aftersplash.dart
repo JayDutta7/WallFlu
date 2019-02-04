@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wallflu/login/login.dart';
+import 'package:wallflu/registration/registration.dart';
 
 class AfterSplash extends StatelessWidget {
   @override
@@ -68,7 +69,7 @@ class _afterSpalsh extends State<AfterSplashDart> {
               ),
             ),
             RaisedButton(
-              onPressed: () => clickToLogin(context),
+              onPressed: () => clickToRegis(context),
               splashColor: Colors.white,
               textColor: Colors.black,
               color: Colors.redAccent,
@@ -103,4 +104,10 @@ void clickToLogin(BuildContext context) {
   Navigator.of(context).pushNamed('/Login');
 }
 
-void clickToRegis(BuildContext context) {}
+void clickToRegis(BuildContext context) {
+  Navigator.push(context, MaterialPageRoute(builder: (context) => Registration()))
+      .then((Object result) {
+    print("result from addpage ${result.toString()}");
+  });
+
+}

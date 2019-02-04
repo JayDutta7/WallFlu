@@ -30,11 +30,11 @@ class _LoginState extends State<LoginDart>{
     appBar: AppBar(
       title:Text(
         'Login',
-        maxLines: 1,
-        style: TextStyle(
-            fontSize: 16.0,
-            fontWeight: FontWeight.w600,
-            fontFamily: 'Aleo'),
+        ),
+      centerTitle: true, //For Appbar center text
+      leading: new IconButton(
+        icon: new Icon(Icons.arrow_back, color: Colors.white),
+        onPressed: () => Navigator.of(context).pop(),
       ),
     ),
     );
