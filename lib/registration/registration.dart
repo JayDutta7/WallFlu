@@ -20,17 +20,11 @@ class _regDart extends State<registrationDart> {
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          'Registration',
-          style: TextStyle(color: Colors.white)
-        ),
-        leading: new IconButton(
-          icon: new Icon(Icons.arrow_back, color: Colors.white),
-          onPressed: () => Navigator.of(context).pop(),
-        ),
+
+      body: Container(
+
+
       ),
-      body: Container(),
     );
   }
 }

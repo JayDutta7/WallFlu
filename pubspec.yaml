@@ -28,6 +28,7 @@ flutter:
  - images/flutterwithlogo.png
  - images/flutter_logo.png
  - images/aftrsplshbckgrnd.png
+ - images/mountain.jpg
 
  fonts:
  - family: Aleo

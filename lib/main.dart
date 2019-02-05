@@ -3,9 +3,9 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:wallflu/aftersplash/aftersplash.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(WallPaperApp());
 
-class MyApp extends StatelessWidget {
+class WallPaperApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -31,16 +31,22 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black26,
-      body: Center(
+      // backgroundColor: Colors.black26,
+      body: Container(
+        decoration: BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage("images/mountain.jpg"), fit: BoxFit.fill)),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
-              'WallFlutteR',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                  color: Colors.white, fontSize: 30.0, fontFamily: 'Aleo'),
+            Expanded(
+              child: Center(
+                  child: Text(
+                'WallFlutteR',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    color: Colors.white, fontSize: 30.0, fontFamily: 'Aleo'),
+              )),
             ),
           ],
         ),
@@ -51,19 +57,15 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   void initState() {
     super.initState();
-    startTime();//Calling the async after 2 seconds
+    startTime(); //Calling the async after 2 seconds
   }
 
   void moveToNextPage() {
-    /* Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => FirstScreen()),
-    );*/
     Navigator.of(context).pushReplacementNamed(
         '/AfterSplash'); //SecondScreen//Stack cleared user cannot return to splash
   }
 
   startTime() async {
-    return Timer(Duration(seconds: 2), moveToNextPage);
+    return Timer(Duration(seconds: 4), moveToNextPage);
   }
 }
