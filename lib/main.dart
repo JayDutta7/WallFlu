@@ -66,6 +66,6 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   startTime() async {
-    return Timer(Duration(seconds: 4), moveToNextPage);
+    return Timer(Duration(seconds: 2), moveToNextPage);
   }
 }

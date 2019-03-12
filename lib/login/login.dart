@@ -41,9 +41,14 @@ class _LoginState extends State<LoginDart> {
               TextFormField(
 
                 decoration: InputDecoration(filled: true,
-                    fillColor: Colors.grey[500],labelText: 'Enter your username'),
+                    fillColor: Colors.transparent,labelText: 'Enter your username'),
 
+              ),
+              TextFormField(
+                decoration: InputDecoration(filled: true,
+                    fillColor: Colors.transparent,labelText: 'Enter your password'),
               )
+
             ],
           ),
         ),
