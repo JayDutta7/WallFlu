@@ -6,7 +6,6 @@ class Login extends StatelessWidget {
     // TODO: implement build
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-
       home: LoginDart(),
     );
   }
@@ -38,16 +37,74 @@ class _LoginState extends State<LoginDart> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              TextField(
+              TextFormField(
+                style: TextStyle(color: Colors.white),
+                autofocus: true,
+                decoration: InputDecoration(
+                  filled: true,
+                  //fillColor: Colors.transparent,
+                  labelText: 'Enter your email',
+                  border: OutlineInputBorder(
 
-                decoration: InputDecoration(filled: true,
-                    fillColor: Colors.grey[500],hintText: 'Enter your username'),
+                    borderSide: BorderSide(
+                      color: Colors.white,
+                    ),
+                  ),
+                  prefixIcon: const Icon(
+                    Icons.email,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+              Padding(padding: EdgeInsets.all(8.0)
+              ),
+              TextFormField(
+                style: TextStyle(color: Colors.white),
+                autofocus: true,
+                obscureText: true,//For passwordlike text
+                decoration: InputDecoration(
+                  filled: true,
+                  fillColor: Colors.transparent,
+                  labelText: 'Enter your password',
+                  border: OutlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Colors.white,
+                    ),
+                  ),
+                  prefixIcon: const Icon(
+                    Icons.lock,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+              Padding(padding: EdgeInsets.all(8.0)
+              ),
+              RaisedButton(
+                onPressed: () => clickToLogin(context),
+                splashColor: Colors.blueAccent,
+                color: Colors.white70,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(5.0)),
+                child: Padding(
+                  padding: EdgeInsets.all(10.0),
+                  child: Text(
+                    'Login',
+                    style: TextStyle(
+                        fontSize: 15.0,
+                        color: Colors.indigo,
+                        fontWeight: FontWeight.w800,
+                        fontFamily: 'Aleo'),
+                  ),
+                ),
+              ),
 
-              )
             ],
           ),
         ),
       ),
     );
+  }
+  void clickToLogin(BuildContext context){
+
   }
 }
