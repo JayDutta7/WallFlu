@@ -38,10 +38,10 @@ class _LoginState extends State<LoginDart> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              TextFormField(
+              TextField(
 
                 decoration: InputDecoration(filled: true,
-                    fillColor: Colors.grey[500],labelText: 'Enter your username'),
+                    fillColor: Colors.grey[500],hintText: 'Enter your username'),
 
               )
             ],
